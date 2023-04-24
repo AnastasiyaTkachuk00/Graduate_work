@@ -1,0 +1,34 @@
+1681319278006	geckodriver	INFO	Listening on 127.0.0.1:52528
+1681319278494	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52529" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/pj/bl7d3xkj23q30w7s91snbm140000gn/T/rust_mozprofileVWXCXV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681319279354	Marionette	INFO	Marionette enabled
+1681319279438	Marionette	INFO	Listening on port 52540
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+Read port: 52540
+WebDriver BiDi listening on ws://127.0.0.1:52529
+1681319279710	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/pj/bl7d3xkj23q30w7s91snbm140000gn/T/rust_mozprofileVWXCXV/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52529/devtools/browser/0387fe3c-e046-4cae-aff5-eaced3b71f92
+1681319281234	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1681319294691	geckodriver	INFO	Listening on 127.0.0.1:52629
+1681319295210	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52630" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/pj/bl7d3xkj23q30w7s91snbm140000gn/T/rust_mozprofilexepvRi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1681319295734	Marionette	INFO	Marionette enabled
+1681319295801	Marionette	INFO	Listening on port 52641
+Read port: 52641
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+WebDriver BiDi listening on ws://127.0.0.1:52630
+1681319296064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/pj/bl7d3xkj23q30w7s91snbm140000gn/T/rust_mozprofilexepvRi/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52630/devtools/browser/d7716445-69a2-4d7e-96b9-c29580ccff1c
+1681319297137	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1681322425103	Marionette	INFO	Stopped listening on port 52641
