@@ -460,3 +460,137 @@ def test_ok_chat_icon(browser):
     with allure.step("Скриншот"):
         allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert ok_tooltip == 'Сеть зоомагазинов Zoobazar - Беларусь'
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check vacancies button')
+def test_vacancies_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_VACANCIES_BUTTON)
+    time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/vacancies/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check about us button')
+def test_about_us_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_ABOUT_US_BUTTON)
+    time.sleep(3)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/about/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check our stories button')
+def test_our_stores_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_OUR_STORIES_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/shops/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check pick up button')
+def test_pick_up_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_PICKUP_POINTS_BUTTON3)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/pickup/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check delivery map button')
+def test_delivery_map_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_DELIVERY_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/pickup/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check lessors button')
+def test_lessors_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_LESSORS_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/lessors/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check news button')
+def test_news_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_NEWS_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/news/' in browser.current_url
+
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check Zoobazar guests button')
+def test_zooguests_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_ZOOGUESTS_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/visit/' in browser.current_url
+
+@allure.feature('Footer tests')
+@allure.story('Footer menu: Company')
+@allure.title('Check Zoobazar contacts button')
+def test_contacts_button(browser):
+    zoobazar_main_page = SearchHelper(browser)
+    zoobazar_main_page.go_to_site()
+    time.sleep(3)
+    browser.execute_script("window.scrollTo(0, 3000)")
+    zoobazar_main_page.click_element(Locators.LOCATOR_CONTACTS_BUTTON)
+    time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+    assert 'https://zoobazar.by/contacts/' in browser.current_url
