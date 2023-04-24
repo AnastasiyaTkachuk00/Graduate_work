@@ -2,8 +2,6 @@ from selenium.webdriver.common.by import By
 from base_page import BasePage
 
 
-
-
 class Locators:
     title = (By.CSS_SELECTOR, 'head > title')
     LOCATOR_SEARCH_FIELD = (By.CLASS_NAME, "header-search__content")
@@ -17,8 +15,6 @@ class Locators:
     LOCATOR_DELIVERY_BUTTON = (By.XPATH, '//a[@title="Доставка"]')
     LOCATOR_PICKUP_PIONTS_BUTTON = (By.CSS_SELECTOR, '#header > div.d-none.d-lg-block.header-top__wrapper > div > div > div:nth-child(2) > div.header-top-links > a:nth-child(5)')
     LOCATOR_MAIN_MENU_CATS = (By.XPATH, '//div[@class="main-menu__item main-menu__item--1989"]/a[1]')
-    # LOCATOR_ALERT_YES = (By.XPATH, '//*[@id="header"]/div[1]/div/div/div[1]/div/div[1]/div[2]/button[1]')
-    # LOCATOR_CANCEL_ADV = (By.XPATH, '//*[@id="sale-popup"]/button')
 
     LOCATOR_CATEGORY_BUTTON = (By.CLASS_NAME, 'multiselect__tags')
     LOCATOR_CATEGORY_POPULAR = (By.XPATH, '//li[@class="multiselect__element"][1]')
@@ -104,78 +100,3 @@ class SearchHelper(BasePage):
 
     def click_on_the_search_button(self):
         return self.find_element(Locators.LOCATOR_SEARCH_BUTTON, time=2).click()
-
-    def click_on_the_cart_button(self):
-        return self.find_element(Locators.LOCATOR_CART_BUTTON, time=2).click()
-
-    def title_cart(self):
-        title = (By.CSS_SELECTOR, 'head > title')
-        return self.find_element(Locators.title).click()
-
-    def click_on_the_frame_search_field(self):
-        return self.find_element(Locators.LOCATOR_SEARCH_FRAME_FIELD, time=10).click()
-
-    def check_main_page(self):
-        all_list = self.find_elements(Locators.LOCATOR_MAIN_PAGE, time=2)
-        return all_list
-
-    def click_on_the_login_button(self):
-        return self.find_element(Locators.LOCATOR_LOGIN, time=2).click()
-
-    def title_auth(self):
-        return self.find_element(Locators.LOCATOR_AUTH_TITLE, time=2)
-
-    def click_on_the_del_button(self):
-        return self.find_element(Locators.LOCATOR_DELIVERY_BUTTON, time=2).click()
-
-    def click_on_the_payment_button(self):
-        return self.find_element(Locators.LOCATOR_PAYMENT_BUTTON, time=2).click()
-
-    def click_on_the_pick_up_button(self):
-        return self.find_element(Locators.LOCATOR_PICK_UP_BUTTON, time=2).click()
-
-    def click_on_the_main_menu(self):
-        return self.find_element(Locators.LOCATOR_MAIN_MENU_CATS, time=2).click()
-
-    def click_on_the_yes_button(self):
-        return self.find_element(Locators.LOCATOR_ALERT_YES, time=3).click()
-
-    def click_to_cancel_adv(self):
-        return self.find_element(Locators.LOCATOR_CANCEL_ADV, time=3).click()
-
-    def click_on_the_category(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_BUTTON, time=3).click()
-
-    def choose_category_max_benefits(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_MAX_BENEFITS, time=10).click()
-
-    def choose_category_min_price(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_MIN_PRICE, time=3).click()
-
-    def choose_category_max_price(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_MAX_PRICE, time=3).click()
-
-    def choose_category_popular(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_POPULAR, time=3).click()
-
-    def choose_category_promotions(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_PROMOTIONS, time=3).click()
-
-    def choose_category_most_popular(self):
-        return self.find_element(Locators.LOCATOR_CATEGORY_MOST_POPULAR, time=3).click()
-
-    def click_checkbox_benefits(self):
-        return self.find_element(Locators.LOCATOR_CHECKBOX_BENEFITS, time=3).click()
-
-    def click_checkbox_are_available(self):
-        return self.find_element(Locators.LOCATOR_CHECKBOX_ARE_AVAILABLE, time=3).click()
-
-    def click_checkbox_online(self):
-        return self.find_element(Locators.LOCATOR_CHECKBOX_ONLY_ONLAIN, time=3).click()
-
-    def click_checkbox_searching_result(self):
-        return self.find_element(Locators.LOCATOR_SEARCHING_RESULT, time=10)
-
-    def choose_min_price_dry_food(self):
-        self.choose_min_price_dry_food()
-        min_price = self.find_element(Locators.LOCATOR_FILTER_MIN_PRICE, time=5)
