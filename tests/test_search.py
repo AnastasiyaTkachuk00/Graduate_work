@@ -5,6 +5,7 @@ from page_object import Locators
 from page_object import SearchHelper
 from selenium.webdriver.common.by import By
 import allure
+from allure_commons.types import AttachmentType
 
 exec_path = '/Users/anastasia/Desktop/Graduate_work/chromedriver'
 
@@ -27,6 +28,8 @@ def test_check_card_activation(browser):
     time.sleep(4)
     title_activation = zoobazar_main_page.get_text_from_element(Locators.TITLE_CARD_ACTIVATION)
     time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert title_activation == "Активация карты"
 
 
@@ -39,6 +42,8 @@ def test_check_cart_button(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_CART_BUTTON)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'Корзина' in browser.title
 
 
@@ -50,6 +55,8 @@ def test_zoobazar_search(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_SEARCH_FIELD)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     zoobazar_main_page.enter_word("Корм")
 
 
@@ -63,6 +70,8 @@ def test_check_pick_up_button(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_PICKUP_PIONTS_BUTTON)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'Пункты самовывоза | Zoobazar' in browser.title
 
 
@@ -75,6 +84,8 @@ def test_check_payment_button(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_DELIVERY_BUTTON)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'Доставка и оплата' in browser.title
 
 
@@ -87,6 +98,8 @@ def test_check_delivery_button(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_DELIVERY_BUTTON)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'Доставка и оплата' in browser.title
 
 
@@ -99,6 +112,8 @@ def test_check_favorites_button(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_FAVORITES_BUTTON)
     time.sleep(5)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/personal/favorites/' in browser.current_url
 
 
@@ -113,6 +128,8 @@ def test_check_login_button(browser):
     time.sleep(3)
     logg = zoobazar_main_page.get_text_from_element(Locators.LOCATOG_LOGGIN)
     time.sleep(3)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert logg == "Авторизация"
 
 
@@ -124,21 +141,33 @@ def test_choose_caterogy(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_MAIN_MENU_CATS)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_MAX_BENEFITS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=best_sale&order=desc' in browser.current_url
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_MIN_PRICE)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=price&order=asc' in browser.current_url
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_MAX_PRICE)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=price&order=desc' in browser.current_url
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_POPULAR)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=popular&order=desc' in browser.current_url
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_MOST_POPULAR)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=hit&order=desc' in browser.current_url
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_CATEGORY_PROMOTIONS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/?sort=sale&order=desc' in browser.current_url
 
 @allure.feature('Check filters (Cats page)')
@@ -160,8 +189,14 @@ def test_check_filters_cats(browser):
         (By.XPATH, '//button[@aria-label="% только онлайн"]').text
     button_is_available = browser.find_element\
         (By.XPATH, '//div[@class="filter-rounded-tags__item filter-rounded-tags__item--active"][3]/button').text
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert button_benefits == "Акции и скидки"
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert button_only_online == "% только онлайн"
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert button_is_available == "Есть в наличии"
 
 
@@ -182,6 +217,8 @@ def test_check_filter_weight(browser):
     time.sleep(4)
     zoobazar_main_page.click_element(Locators.LOCATOR_SHOW_RESULTS)
     time.sleep(3)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/sukhie_korma/filter/weight-from-0.19-to-0.35/apply/'\
            in browser.current_url
 
@@ -201,6 +238,8 @@ def test_check_filter_price(browser):
     max_price = browser.find_element(By.ID, 'arrFilter_P5_MAX')
     max_price.send_keys('10')
     zoobazar_main_page.click_element(Locators.LOCATOR_SHOW_RESULTS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/sukhie_korma/filter/price-discount_price-from-1-to-10/apply/'\
            in browser.current_url
 
@@ -219,6 +258,8 @@ def test_check_filter_brands(browser):
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_SHOW_RESULTS)
     time.sleep(4)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/sukhie_korma/filter/brand-is-acana-or-chicopee/apply/'\
            in browser.current_url
 
@@ -235,9 +276,10 @@ def test_check_filter_type_of_feed(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_TYPE_OF_FEED_BUTTON)
     zoobazar_main_page.click_element(Locators.LOCATOR_DRY_FEED_CHECKBOX)
     zoobazar_main_page.click_element(Locators.LOCATOR_SHOW_RESULTS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'https://zoobazar.by/catalog/koshki/sukhie_korma/filter/' \
            'vid_korma-is-1152f3fe-b468-11ea-a4c1-0050568f1acb/apply/' in browser.current_url
-
 
 
 @allure.feature('Check filters (Cats page)')
@@ -259,7 +301,11 @@ def test_check_filter_special_series(browser):
     time.sleep(2)
     gluten_free = browser.find_element(By.XPATH, '//button[@aria-label="Безглютеновый"]').text
     holistik = browser.find_element(By.XPATH, '//button[@aria-label="Холистик"]').text
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert "Безглютеновый" in gluten_free
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert 'Холистик' in holistik
 
 
@@ -279,6 +325,8 @@ def test_check_filter_packing(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_TYPE_OF_PACKING_BAG)
     time.sleep(3)
     zoobazar_main_page.click_element(Locators.LOCATOR_SHOW_RESULTS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert "https://zoobazar.by/catalog/koshki/sukhie_korma/filter/" \
            "tip_upakovki-is-9726308d-bf8c-11ea-a4c7-0050568f1acb-or-a010d7c3-f8ee-11ea-a4d7-0050568fefb1/apply/"\
            in browser.current_url
@@ -298,6 +346,8 @@ def test_add_to_cart(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_CART_ICON3)
     zoobazar_main_page.click_element(Locators.LOCATOR_CART_BUTTON)
     goods_in_cart = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_AMOUNT_OF_GOODS)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert '3 шт' in goods_in_cart
 
 
@@ -313,9 +363,13 @@ def test_add_to_favorites(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_ADD_TO_FAVORITES3)
     time.sleep(4)
     small_icon_count = browser.find_element(By.XPATH, '//a[@title="Избранное"]/span').text
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert small_icon_count == '3'
     zoobazar_main_page.click_element(Locators.LOCATOR_FAVORITES_BUTTON)
     items_count = browser.find_element(By.XPATH, '//span[@class="items-count"]').text
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert items_count == '3'
 
 
@@ -331,6 +385,8 @@ def test_live_chat_icon(browser):
     zoobazar_main_page.click_element(Locators.LOCATOR_LIVE_CHAT)
     time.sleep(3)
     tooltip = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_TITLE_LIVE_CHAT)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert tooltip == 'Форма обратной связи'
 
 
@@ -347,6 +403,8 @@ def test_viber_chat_icon(browser):
     hover = ActionChains(browser).move_to_element(viber)
     hover.perform()
     viber_tooltip = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_TOOLTIP_VIBER)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert viber_tooltip == 'Zoobazar'
 
 
@@ -363,6 +421,8 @@ def test_telegram_chat_icon(browser):
     hover = ActionChains(browser).move_to_element(tg)
     hover.perform()
     tg_tooltip = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_TOOLTIP_TELEGRAM)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert tg_tooltip == 'Zoobazar.by: Обратная связь'
 
 
@@ -379,6 +439,8 @@ def test_vk_chat_icon(browser):
     hover = ActionChains(browser).move_to_element(vk)
     hover.perform()
     vk_tooltip = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_TOOLTIP_VK)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert vk_tooltip == 'Сеть зоомагазинов Zoobazar — Беларусь'
 
 
@@ -395,4 +457,6 @@ def test_ok_chat_icon(browser):
     hover.perform()
     ok_tooltip = zoobazar_main_page.get_text_from_element(Locators.LOCATOR_TOOLTIP_OK)
     time.sleep(3)
+    with allure.step("Скриншот"):
+        allure.attach(browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
     assert ok_tooltip == 'Сеть зоомагазинов Zoobazar - Беларусь'
