@@ -67,7 +67,3 @@ class BasePage:
                 EC.element_to_be_clickable(locator), message=f"Can't find element by locator {locator}"
             )
         ).click()
-
-
-
-
