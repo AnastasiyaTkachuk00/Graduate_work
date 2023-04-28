@@ -1,9 +1,17 @@
 from locators.locators_main_func import MainFunctionsLocators
 from base_page import BasePage
+from locators.locators_header import HeaderLocators
 import time
 
 
 class SearchHelper(BasePage):
+
+    def check_activation_button(self):
+        time.sleep(3)
+        self.click_element(HeaderLocators.LOCATOR_CARD_ACTIVATION)
+        time.sleep(4)
+        title_activation = self.get_text_from_element(HeaderLocators.TITLE_CARD_ACTIVATION)
+        assert title_activation == "Активация карты"
 
     def choose_category_max_benefits(self):
         self.click_element(MainFunctionsLocators.LOCATOR_MAIN_MENU_CATS)
