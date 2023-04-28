@@ -8,7 +8,7 @@ from allure_commons.types import AttachmentType
 def test_check_card_activation(browser):
     zoobazar_main_page = SearchHelper(browser)
     zoobazar_main_page.go_to_site()
-    zoobazar_main_page.activation_card()
+    zoobazar_main_page.check_activation_button()
 
 
 @allure.feature('Choose category tests')
