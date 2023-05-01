@@ -1,7 +1,7 @@
 ## QA: Selenium Test Automation Project
 
 _written in_
-#### Python 3.9.6 / Selenium / pytest
+#### Python 3.9 / Selenium / pytest
 
 The project is created to outline most popular Selenium WebDriver
 commands and their usage.
